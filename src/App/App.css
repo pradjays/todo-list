@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background: #fff0f5;
+}
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #342c2c;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #00A1F1;
+  outline: none;
+  width: 400px;
+  background: transparent;
+  color: #342C2C;
+}
+
+.todo-input::placeholder {
+  color: #342C2C;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    #00A1F1 0%,
+    #086a9a 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.todo-input.edit {
+  width: 365px;
+  border: 2px solid #7cbb00;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    #7cbb00 0%,
+    #5d860f 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: #abc2ec;
+  padding: 16px;
+  border-radius: 5px;
+  width: 460px;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: #9bc1ea;
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: #92b6c2;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: #93a4d5;
+}
+
+.todo-border {
+  border: 3px solid #cb1d1d;
+}
+
+.in-progress-border {
+  border: 3px solid #f6cc00;
+}
+
+.complete-border {
+  border: 3px solid #22a10e;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.todo-text {
+  width: 270px;
+  overflow-wrap: anywhere;
+  padding: 5px;
+  text-align: left;
+}
+
+
+@media (max-width: 768px) {
+  .todo-app {
+    width: 270px;
+  }
+
+  .todo-row {
+    width: 270px;
+  }
+
+  .todo-input {
+    width: 200px;
+  }
+
+  .todo-input.edit {
+    width: 165px;
+  }
+
+}
